@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>LovelyMart</title>
+<link rel="stylesheet" type="text/css" href="lovelymart.css" />
+<link rel="stylesheet" type="text/css" href="lovelymartproduct.css" />
+<link rel="stylesheet" type="text/css" href="lovelymartmobile.css" />
+<link rel="stylesheet" type="text/css" href="addtocart.css" />
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+</head>
+<body>
+<div class="header">
+	<img id="lovelylogo" style="visibility:visible;" src="logo lovely.gif" />	
+	<marquee direction="left" class="left">LovelyMart-Best Online Shopping E-commerce Website</marquee>
+</div>
+<div id="main_nav" class="navbar">
+	<ul class="navigation">
+	<a id="menubuttons"  title="MENU CATEGORIES" onclick="show('menubutton');"><img src="menubutton.jpg"></a>
+		<li><a href="home.html" target="_parent">Home</a></li>
+		
+		
+		
+		
+		<li><a href="Loginmart.html" target="_parent">Login</a>
+		<ul>
+			<li><a href="registerlm.html" target="_parent">New Registration</a></li>
+			<li><a href="forgotpass.html" target="_parent">Forgot Password</a></li>
+		</ul>		
+		</li>
+		
+		
+		
+		
+		
+		<li><a href="user_reviews.html" target="_parent">User Reviews</a></li>
+		
+		
+		
+		
+		
+		<li><a href="addtocart.html" target="_parent">Add to Cart</a></li>
+		
+		
+		
+		
+		
+		<li><a href="about.html" target="_parent">About Us</a></li>
+		
+		
+		
+		
+		
+		<li><a href="contacts.html" target="_parent">Contact Us</a></li>
+		
+		
+		
+	</ul>
+	<select id="menucategories" style="display:none;" onchange="location = this.value;">
+				<option>CATEGORIES</option>
+				<option disabled>[CLOTHES]</option>
+				<option value="men_cloth.html">Men Fashion</option>
+				<option value="women_cloth.html">Women Fashion</option>
+				<option value="kid_cloth.html">Kid Fashion</option>
+				<option disabled>[Shoes]</option>
+				<option value="men_shoes.html">For Men</option>
+				<option value="women_shoes.html">For Women</option>
+				<option value="kid_shoes.html">For Kid</option>
+				<option disabled>[Electronics]</option>
+				<option value="led_tv.html">LED TV</option>
+				<option value="laptop.html">Laptop</option>
+				<option disabled>[Watches]</option>
+				<option value="m_watch.html">For Men</option>
+				<option value="w_watch.html">For Women</option>
+				<option value="k_watch.html">For Kid</option>	
+	</select>
+	<select id="mainmenu" name="mainmenu"  onchange="location = this.value;">
+	<option value="home.html" href="home.html" selected>HOME</option>
+	<option value="Loginmart.html" href="Loginmart.html" disabled>LOGIN | REGISTER</option>
+	<option value="Loginmart.html" href="Loginmart.html" >LOGIN</a></option>
+	<option value="registerlm.html" href="registerlm.html" >NEW REGISTERATION</option>
+	<option value="forgotpass.html" href="forgotpass.html" >FORGOT PASSWORD</option>
+	<option value="user_reviews.html" href="user_reviews.html" >USER REVIEWS</option>
+	<option value="addtocart.html" href="addtocart.html" >ADD TO CART</option>
+	<option value="about.html" href="about.html" >ABOUT US</option>
+	<option value="contacts.html" href="contacts.html" >CONTACT US</option>
+	</select>
+
+</div>																																																					
+<div class="products" >
+	
+	<div class="prod_slide">
+			<img src="image1.jpg" class="produ_t" name="slideshow2" >
+			<script type="text/javascript">
+				var numberImage =1
+				function myslide()
+				{
+					document.images.slideshow2.src=("image"+numberImage+".jpg")
+					if(numberImage <2)
+					numberImage = numberImage +1
+					else
+					numberImage =1
+					setTimeout("myslide()",4500)
+				}
+				myslide()
+			</script>
+			
+	</div>
+<script>
+  function show(data)
+  {
+     var display = document.getElementById(data);
+	 if(display.style.display === 'none')
+	 {
+		display.style.display = 'block';
+	 }
+	 else
+	 {
+	 display.style.display = 'none';
+	 }
+  }
+  function startAnim(id)
+  {
+	var imgId=document.getElementById(id);
+	imgId.style.transition=(2*Math.random()+3*Math.random())+'s';
+	imgId.style.webkitTransform='scale(-'+1.5*Math.random()+') rotate('+10*Math.random()+'deg)';
+	
+	imgId.style.transform='scale(-'+1.5*Math.random()+') rotate('+10*Math.random()+'deg)';
+	imgId.style.backfaceVisibility = "hidden";
+	imgId.style.perspective ="1000px";
+  }
+  function closeAnim(id)
+  {
+	var imgId=document.getElementById(id);
+	imgId.style.transition='0.6s';
+	imgId.style.webkitTransform='scale(1) rotate(0deg)';
+	
+	imgId.style.transform='scale(1) rotate(0deg)';
+	imgId.style.backfaceVisibility = "hidden";
+	imgId.style.perspective ="1000px";
+  }
+  (function(){
+    var prevTarget=null;
+    document.addEventListener('mouseover', function(e) {
+        var target=e.target;
+		var strTarget=target+"";
+        if(target!==prevTarget){
+			if(strTarget=="[object HTMLImageElement]")
+			{
+				startAnim(target.id);
+			}
+            console.log(target);
+            prevTarget=target;
+			//alert(target+","+strTarget+","+"[object HTMLImageElement]");
+        }
+    });
+})();
+(function(){
+    var prevTarget=null;
+    document.addEventListener('mouseout', function(e) {
+        var target=e.target;
+		var strTarget=target+"";
+        if(target!==prevTarget){
+			if(strTarget=="[object HTMLImageElement]")
+			{
+			//alert("out function");
+				closeAnim(target.id);
+			}
+            console.log(target);
+            prevTarget=target;
+			//alert(target+","+strTarget+","+"[object HTMLImageElement]");
+        }
+    });
+})();
+</script>
+	<div id="menubutton" class="categories">
+
+			<h1>CATEGORIES</h1>
+				<h3 onclick="show('cloth_cat')">CLOTHES [+]</h3>
+				<div id="cloth_cat" class="cloth_cat">
+					<h4><a href="men_cloth.html">Men Fashion</a></h4>
+					<h4><a href="women_cloth.html">Women Fashion</a></h4>
+					<h4><a href="kid_cloth.html">Kid Fashion</a></h4>
+				</div>
+				<h3 onclick="show('shoes_cat')">Shoes [+]</h3>
+				<div id="shoes_cat" class="shoes_cat">
+					<h4><a href="men_shoes.html">For Men</a></h4>
+					<h4><a href="women_shoes.html">For Women</a></h4>
+					<h4><a href="kid_shoes.html">For Kid</a></h4>
+				</div>
+				<h3 onclick="show('electronics_cat')">Electronics [+]</h3>
+				<div id="electronics_cat" class="electronics_cat">
+					<h4><a href="led_tv.html">LED TV</a></h4>
+					<h4><a href="laptop.html">Laptop</a></h4>
+				</div>
+				<h3 onclick="show('watch_cat')">Watches [+]</h3>
+				<div id="watch_cat" class="watch_cat">
+					<h4><a href="m_watch.html">For Men</a></h4>
+					<h4><a href="w_watch.html">For Women</a></h4>
+					<h4><a href="k_watch.html">For Kid</a></h4>	
+				</div>
+	</div>
+	<div class="productsdetails">
+		
+		<div id="id01" class="modal" style="background-color:#f1f1f1">
+				<div class="imgcontainer">
+					<span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Details">&times;</span>
+					<img src="img_avatar2.png" alt="IMAGE" name="picture" id="demo_image" class="avatar" width="654" height="306" itemprop="image" style="transition: 0.2s; transform: none;">
+				</div>
+				<div class="container" >
+				<div class="datas">
+					<h1>Object Name >></h1><br />
+					<span id="demo_name">Object</span>
+					<br />
+					<h1>Price >></h1>
+					<span id="dollar">Rs.  </span><span id="demo_price">Price</span>
+					<br />
+					<h1>Quantity</h1>
+					<select onclick="demo_totals()" id="quantity">
+					<option selected value="1">1</option>
+					<option value="2">2</option>
+					<option value="3">3</option>
+					<option value="4">4</option>
+					<option value="5">5</option>
+					<option value="6">6</option>
+					<option value="7">7</option>
+					<option value="8">8</option>
+					<option value="9">9</option>
+					<option value="10">10</option>
+					<option value="12">11</option>
+					<option value="12">12</option>
+					</select>
+					<br />
+					<h1>Total Price >></h1>
+					<span id="dollar">Rs.  </span><span id="demo_total">Please select quantity</span>
+					<h1>
+						<a class="paying" href="lovely_payment.html"><button type="submit" onclick="save2();">PAY MONEY </button></a>
+						<a class="add" href="addtocart.html"><button id="adddtocart" type="button" onclick="document.getElementById('id01').style.display='none';save();">Add to Cart</button></a>
+						<button id="canceling" type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>	
+					</h1>
+				</div>
+				</div>
+		</div>
+<script>
+function save(){
+var Addname=document.getElementById('demo_name').innerHTML;
+localStorage.setItem("Addname1", Addname); // save the item
+var Addprice=document.getElementById('demo_price').innerHTML;
+localStorage.setItem("Addprice1",Addprice);
+var Addimage=document.getElementById('demo_image').src;
+localStorage.setItem("Addimage1",Addimage);
+var Addquantity=document.getElementById('quantity').value;
+localStorage.setItem("Addquantity1",Addquantity);
+var Addtotal=document.getElementById('demo_total').innerHTML;
+localStorage.setItem("Addtotal1",Addtotal);
+alert("Added to Cart");
+}
+function save2(){
+var Addname=document.getElementById('demo_name').innerHTML;
+localStorage.setItem("Addname3", Addname); 
+var Addprice=document.getElementById('demo_price').innerHTML;
+localStorage.setItem("Addprice3",Addprice);
+var Addimage=document.getElementById('demo_image').src;
+localStorage.setItem("Addimage3",Addimage);
+var Addquantity=document.getElementById('quantity').value;
+localStorage.setItem("Addquantity3",Addquantity);
+var Addtotal=document.getElementById('demo_total').innerHTML;
+localStorage.setItem("Addtotal3",Addtotal);
+alert("Redirecting to Page...");
+}
+</script>
+<script>
+// Get the modal
+var modal = document.getElementById('id01');
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}
+	function show_img(data)
+	{
+		var imageshow = document.getElementById(data);
+		var x = document.getElementById(data).src;
+		document.images.picture.src=(x);
+	}
+	function show_name(data)
+	{
+		var nameshow = document.getElementById(data);
+		var x = document.getElementById(data).innerHTML;
+		document.getElementById("demo_name").innerHTML =x;
+	}
+	function show_price(datap)
+	{
+		var priceshow = document.getElementById(datap);
+		var x = document.getElementById(datap).innerHTML;
+		document.getElementById("demo_price").innerHTML =x;
+		demo_totals()
+	}
+	function demo_totals()
+	{
+		var x = document.getElementById("demo_price").innerHTML;
+		var y = document.getElementById("quantity").value;
+		document.getElementById("demo_total").innerHTML = x*y;
+	}
+</script>
+	<div class="clothes_data">
+		<div class="cloth_1">
+			<span onclick="document.getElementById('id01').style.display='block'; show_img('watchm1'); show_price('watch_m1p');show_name('watch_m1');" style="width:auto;">
+			<div class="cloth_image">
+			<img id="watchm1" src="m watch1.jpg">
+			</div>
+			<div class="cloth_name">
+			<span id="watch_m1">Watch</span>
+			</div>
+			<div class="cloth_price">
+			Rs.  <span id="watch_m1p">40</span>
+			</div>
+			</span>
+		</div>
+		<div class="cloth_1">
+			<span onclick="document.getElementById('id01').style.display='block'; show_img('watchm2'); show_price('watch_m2p');show_name('watch_m2');" style="width:auto;">
+			<div class="cloth_image">
+			<img id="watchm2" src="m watch2.jpg">
+			</div>
+			<div class="cloth_name">
+			<span id="watch_m2">Watch 2</span>
+			</div>
+			<div class="cloth_price">
+			Rs.  <span id="watch_m2p">42</span>
+			</div>
+			</span>
+		</div>
+		<div class="cloth_1">
+			<span onclick="document.getElementById('id01').style.display='block'; show_img('watchm3'); show_price('watch_m3p');show_name('watch_m3');" style="width:auto;">
+			<div class="cloth_image">
+			<img id="watchm3" src="m watch3.jpg">
+			</div>
+			<div class="cloth_name">
+			<span id="watch_m3">Watch 3</span>
+			</div>
+			<div class="cloth_price">
+			Rs.  <span id="watch_m3p">30</span>
+			</div>
+			</span>
+		</div>
+		<div class="cloth_1">
+			<span onclick="document.getElementById('id01').style.display='block'; show_img('watchm4'); show_price('watch_m4p');show_name('watch_m4');" style="width:auto;">
+			<div class="cloth_image">
+			<img id="watchm4" src="m watch4.jpg">
+			</div>
+			<div class="cloth_name">
+			<span id="watch_m4">Watch 4</span>
+			</div>
+			<div class="cloth_price">
+			Rs.  <span id="watch_m4p">34</span>
+			</div>
+			</span>
+		</div>
+		<div class="cloth_1">
+			<span onclick="document.getElementById('id01').style.display='block'; show_img('watchm5'); show_price('watch_m5p');show_name('watch_m5');" style="width:auto;">
+			<div class="cloth_image">
+			<img id="watchm5" src="m watch5.jpg">
+			</div>
+			<div class="cloth_name">
+			<span id="watch_m5">Watch 5</span>
+			</div>
+			<div class="cloth_price">
+			Rs.  <span id="watch_m5p">55</span>
+			</div>
+			</span>
+		</div>
+		<div class="cloth_1">
+			<span onclick="document.getElementById('id01').style.display='block'; show_img('watchm6'); show_price('watch_m6p');show_name('watch_m6');" style="width:auto;">
+			<div class="cloth_image">
+			<img id="watchm6" src="m watch6.jpg">
+			</div>
+			<div class="cloth_name">
+			<span id="watch_m6">Watch 6</span>
+			</div>
+			<div class="cloth_price">
+			Rs.  <span id="watch_m6p">43</span>
+			</div>
+			</span>
+		</div>
+		<div class="cloth_1">
+			<span onclick="document.getElementById('id01').style.display='block'; show_img('watchm7'); show_price('watch_m7p');show_name('watch_m7');" style="width:auto;">
+			<div class="cloth_image">
+			<img id="watchm7" src="m watch7.jpg">
+			</div>
+			<div class="cloth_name">
+			<span id="watch_m7">Watch 7</span>
+			</div>
+			<div class="cloth_price">
+			Rs.  <span id="watch_m7p">55</span>
+			</div>
+			</span>
+		</div>
+		<div class="cloth_1">
+			<span onclick="document.getElementById('id01').style.display='block'; show_img('watchm8'); show_price('watch_m8p');show_name('watch_m8');" style="width:auto;">
+			<div class="cloth_image">
+			<img id="watchm8" src="m watch8.jpg">
+			</div>
+			<div class="cloth_name">
+			<span id="watch_m8">Watch 8</span>
+			</div>
+			<div class="cloth_price">
+			Rs.  <span id="watch_m8p">99</span>
+			</div>
+			</span>
+		</div>
+		<div class="cloth_1">
+			<span onclick="document.getElementById('id01').style.display='block'; show_img('watchm9'); show_price('watch_m9p');show_name('watch_m9');" style="width:auto;">
+			<div class="cloth_image">
+			<img id="watchm9" src="m watch9.jpg">
+			</div>
+			<div class="cloth_name">
+			<span id="watch_m9">Watch 9</span>
+			</div>
+			<div class="cloth_price">
+			Rs.  <span id="watch_m9p">115</span>
+			</div>
+			</span>
+		</div>
+		<div class="cloth_1">
+			<span onclick="document.getElementById('id01').style.display='block'; show_img('watchm10'); show_price('watch_m10p');show_name('watch_m10');" style="width:auto;">
+			<div class="cloth_image">
+			<img id="watchm10" src="m watch10.jpg">
+			</div>
+			<div class="cloth_name">
+			<span id="watch_m10">Watch 10</span>
+			</div>
+			<div class="cloth_price">
+			Rs.  <span id="watch_m10p">299</span>
+			</div>
+			</span>
+		</div>
+		<div class="cloth_1">
+			<span onclick="document.getElementById('id01').style.display='block'; show_img('watchm11'); show_price('watch_m11p');show_name('watch_m11');" style="width:auto;">
+			<div class="cloth_image">
+			<img id="watchm11" src="m watch11.jpg">
+			</div>
+			<div class="cloth_name">
+			<span id="watch_m11">Watch 11</span>
+			</div>
+			<div class="cloth_price">
+			Rs.  <span id="watch_m11p">123</span>
+			</div>
+			</span>
+		</div>
+		<div class="cloth_1">
+			<span onclick="document.getElementById('id01').style.display='block'; show_img('watchm12'); show_price('watch_m12p');show_name('watch_m12');" style="width:auto;">
+			<div class="cloth_image">
+			<img id="watchm12" src="m watch12.jpg">
+			</div>
+			<div class="cloth_name">
+			<span id="watch_m12">Watch 12</span>
+			</div>
+			<div class="cloth_price">
+			Rs.  <span id="watch_m12p">42</span>
+			</div>
+			</span>
+		</div>
+	</div>
+	</div>
+</div>
+
+
+<div class="footer">
+	Copyright &copy; Abhishek Mandloi,Yahya Jami,Harshit Jaiswal,Akash Kumar Singh
+</div>
+</body>
+</html>

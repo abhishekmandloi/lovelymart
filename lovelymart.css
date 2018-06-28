@@ -1,0 +1,412 @@
+body
+{
+	margin: 0px 5px 0px 5px;
+	background:white;
+}
+.search_bar
+{
+	width:670px;
+	z-index: 300px;
+	margin:2px 400px;
+}
+.search
+{
+	border-radius:0px;
+	border:2px solid white;
+	border-color: black blue red green;	
+	
+	width:500px;
+}
+.search_button
+{
+	background-color: lightseagreen;
+	color:white;
+}
+input.back:hover,input.forgot:hover
+{
+	background-color: red;
+}
+input.submit:hover
+{
+	background-color: green;
+}
+input.register:hover
+{
+	background-color: black;
+	border-color: black;
+}
+textarea 
+{
+	background-color:white;
+	border-radius:10px; 
+	color:brown;
+	transparent:39%;	
+	font-size:15px;
+	padding-left:10px;
+	float:bottom;
+	border:4px solid lightgray;
+}
+a#menubuttons
+{
+  cursor:pointer;
+	width:200px;
+}
+div.Login,div.registration
+{
+	padding-top: 50px;
+	width:100%;
+	
+}
+.header
+{
+	position:fixed;
+	display:block;
+	width:100%;
+	background-color:aqua;
+}
+.navbar{
+	 position:fixed;	
+	padding-top:10px;
+	padding-left:290px;
+	}
+ ul.navigation {
+	width:100%;
+	background-color:black;
+	padding:15px 28px 15px 28px;
+ }
+
+div a {
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+    padding: 15px;
+    display:inline-block;
+}
+ul {
+  display: inline;
+  margin: 0;
+  padding: 0;
+}
+ul li {display: inline-block;}
+ul li:hover {background: #555;}
+ul li:hover ul {display: block;}
+ul li ul {
+  position: absolute;
+  width: 200px;
+  display: none;
+}
+ul li ul li { 
+  background: #555; 
+  display: block; 
+	width:120px;
+	text-align: center;
+	margin-left:-20px;
+}
+ul li ul li a {display:block !important;} 
+ul li ul li:hover {background: #666;}
+img
+{
+	width:10%;
+	height:10%;
+}
+marquee.left
+{
+	color:white;
+	background-color:blue;
+}
+.footer
+{
+	font-family:Tempus Sans ITC;
+	margin-bottom:5px;
+	clear: both;
+	padding: 10px;
+	background-color: grey;
+	color: white;
+	text-align: right;
+	bottom: 0px;
+}
+select#cityname
+{
+	background-color:lightgrey;
+	color:blueviolet;
+	padding-left:5px;
+	width:30%;
+	font-size: 20px;
+}
+select#cityname option
+{
+	padding-left:25px;
+	color:brown;
+}
+.registration pre input 
+{
+	background-color: white;
+	color:brown;
+	font-family: Calibri;
+	font-size: 20px;
+	border:3px solid lightgray;
+}
+input.submit
+{
+	color:white;
+	padding:1px 15px 1px 15px;
+	background-color:navy;
+	border:1px;
+	font-size:20px;
+	border-radius:20px;
+}
+input 
+{
+	padding:1%;
+	border-radius:10px;
+	font-family:Comic Sans MS ;
+}
+input.back
+{
+	width:200px;
+	height:40px;
+	background-color:black;
+	border:none;
+	border-radius:0px;
+}
+input.radio
+{
+	float:right;
+}
+
+input.ilogin
+{
+	padding-right: 1%;
+	padding-left:2%;
+	border:1px solid lightgray;
+	
+}
+input.ilogin#user
+{
+	color:black;
+	background: url('user_icon.png') left no-repeat;
+}
+
+input.ilogin#pass
+{
+	color:black;
+	background: url('password_icon.png') left no-repeat;
+}
+.wrongpass
+{
+	display:none;
+}
+input.register,
+input.forgot{
+	background-color:green;
+	padding: 0px 10px 0px 10px;
+	color:white;
+	width:150px;
+	height:30px;
+}
+input.register{
+	border:1px solid red;
+	border-radius: 100% 100% 0px 0px;
+	background-color: red;
+	height: 150px;
+	font-weight: bold;
+	font-family: Segoe Script;
+}
+label{
+	color:green;
+	float:none;
+	width:150px;
+	height:30px;
+	font-size:20px;
+}
+label.radio1
+{
+	color:green;
+	float:left;
+	font-size:20px;
+}
+.registration .reg ,.registration input
+{	
+	border:none;
+	padding-left:1%;
+	color:white;
+	width:40%;
+	float:left;
+}
+a{
+	color:lightblue;
+	text-decoration: none;
+}
+.products
+{
+	padding-top:95px;
+}
+img.produ_t
+{
+	height:200px;
+	width:100%;
+}
+.categories 
+{
+	margin:3px;
+	padding:10px;
+	background-color:lightgray;
+	float:left;
+	text-align: left;
+	display:table;
+}
+.categories h1
+{
+	padding:3px;
+	color:grey;
+	display:block;
+}
+.categories h3
+{	
+	margin-left:5px;
+	padding-left:8px;
+	padding-bottom:10px;
+	text-transform:uppercase;
+	color:green;
+	display:table-row;
+}
+.categories h4
+{
+	padding-left:30px;
+}
+#main
+{
+	margin-top:50px;
+	float:left;
+	padding-top:30px;
+}
+#cmain
+{
+	margin-top:50px;
+	font-weight:bold;
+}
+#cmain .contactforum
+{
+	width:500px;
+	border:1px solid lightblue;
+	font-size:20px;
+	background-color: rgba(0,0,0,0.6);
+	color:white;
+	margin: 20px 415px;
+}
+#cmain .contactforum input.text
+{
+	background-color:white;
+	border-radius:10px; 
+	color:brown;
+	font-size:15px;
+	padding-left:10px;
+	width:95%;
+	float:bottom;
+	border:4px solid lightblue;
+  }
+.productsdetails img
+{
+	margin:10px;
+	float:right;
+	height:100%;
+	width:80%;
+}
+.aboutus
+{
+	font-family:Kristen ITC ;
+	text-align:center;
+	font-size:20px;
+	color:green;
+}
+h4 a
+{
+	text-decoration:none;
+	color:black;
+}
+h4 a:hover
+{
+	font-family:calibri;
+	cursor:pointer;
+	color:red;
+}
+.clothes_data
+{
+	width:1000px;
+	float:left;
+}
+.cloth_1
+{
+	width:250px;
+	height:100%;
+	float:left;
+}
+.cloth_1
+{
+	font-family:Segoe Print;
+}
+.cloth_1 img
+{
+	width:150px;
+	height:150px;
+	overflow:hidden;
+}
+.cloth_name
+{
+	color:seagreen;
+	font-size:20px;
+	padding-top:120px;
+	padding-left:140px;
+}
+.cloth_price
+{
+	color:purple;
+	padding-left:140px;
+}
+.clothes img,.shoes img,.electronics img,.watches img
+{
+	width: 70%;
+}
+h4
+{
+	font-family:Harrington ;
+}
+h1
+{
+	font-family:Kristen ITC;
+}
+h3
+{
+	font-family: Lucida Calligraphy;
+}
+select#cityname
+{
+	border-radius:20px;
+}
+strong
+{
+font-family:Franklin Gothic Book;
+}
+a input.back
+{
+	padding:0;
+	margin:0;
+	font-family:initial;
+	color:white;
+	width:100%;
+}
+#registers.registration pre,label.radio1
+{
+	margin-left:500px;
+	margin-right:0px;
+}
+#registers.registration input.submit
+{
+	width:300px;
+	margin-right:10%;
+	margin-left:60%;
+}
+fieldset
+{
+	border:0;
+}

@@ -1,0 +1,113 @@
+@media screen and (min-width: 1337px) 
+{
+ul.navigation
+{
+	visibility: visible;
+}
+select#mainmenu
+	{
+		display: none;
+	}
+}
+@media screen and (max-width: 1337px) 
+{
+select#mainmenu
+	{
+		visibility: hidden;
+		width:500px;
+		border:0;
+		padding-left:250px;
+	}
+select#mainmenu option
+	{
+		padding:10px;
+		padding-left:200px;
+	}
+	ul.navigation
+{
+	visibility: visible;
+	margin-left: -70px;
+}
+}
+@media screen and (max-width: 1177px) 
+{
+	select#mainmenu
+	{
+		visibility: hidden;
+		width:500px;
+		border:0;
+		padding-left:250px;
+	}
+select#mainmenu option
+	{
+		padding:10px;
+		padding-left:200px;
+	}
+	ul.navigation
+{
+	visibility:visible;
+	margin-left: -160px;
+}
+}
+@media screen and (max-width: 1176px) 
+{
+	select#mainmenu
+	{
+		visibility: visible;
+		width:500px;
+		border:0;
+		margin-top:-50px;
+		padding-left:250px;
+	}
+select#mainmenu option
+	{
+		padding:10px;
+		padding-left:200px;
+	}
+	ul.navigation
+{
+	visibility:hidden;
+	margin-left: -160px;
+}
+}
+@media screen and (max-width: 790px) 
+{
+		
+.clothes_data
+{
+	width:1000px;
+	float:left;
+}
+.cloth_1
+{
+	width:250px;
+	height:100%;
+	float:left;
+}
+.cloth_1
+{
+	font-family:Segoe Print;
+}
+.cloth_1 img
+{
+	width:150px;
+	height:150px;
+
+}
+.cloth_name
+{
+	color:seagreen;
+	font-size:20px;
+	padding-top:120px;
+	padding-left:140px;
+}
+.cloth_price
+{
+	color:purple;
+	padding-left:140px;
+}
+.clothes img,.shoes img,.electronics img,.watches img
+{
+	width: 78%;
+}
+}

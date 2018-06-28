@@ -1,0 +1,131 @@
+.payment_process h1
+{
+  text-align: center;
+  color:brown;
+  font-size: 50px;
+  font-weight: bold;
+  font-family: Calibri;
+  border:1px solid brown;
+  margin-left: 60px;
+  margin-right: 60px;
+}
+.payment_process a{
+  color:black;
+  font-size:200%;
+  margin-left:450px;
+  margin-top:10px;
+  margin-bottom:30px;
+  border:1px solid black;
+  border-radius:40px;
+  
+}
+.payment_process a:hover
+{
+  background-color:lightgray;
+}
+.payment_process .cash_on_del 
+{
+  margin-left:545px;
+  margin-top: 50px;
+}
+.payment_process .padding_payment
+{
+  margin-bottom: 150px;
+}
+.cash_on_delivery
+{
+  margin-left:40%;
+}
+.cash_on_delivery h2
+{
+  margin-left:10px;
+  color:blueviolet;
+}
+.cash_on_delivery a
+{
+  color:brown;
+  margin-left:-30px;
+  font-size:50px;
+}
+.cash_on_delivery input[type=text]
+{
+  color:cadetblue;
+  padding:1%;
+  font-size:15px;
+  margin-left:10px;
+  margin-bottom: 20px;
+  font-family:Comic Sans MS ;
+}
+.cash_on_delivery input[type=submit]
+{
+  margin-left:40%;
+  margin-bottom: 30px;
+  padding-left:2%;
+  padding-right:2%;
+  background-color:black;
+  color:white;
+  font-weight: bold;
+}
+.cash_on_delivery input[type=submit]:hover
+{
+  background-color:green;
+}
+#paycard.paycard
+{
+  margin-left:500px;
+}
+#paycard.paycard h1
+{
+  color:brown;
+}
+#paycard.paycard a.paynowcard
+{
+  color:black;
+  font-size: 40px;
+}
+#paycard.paycard h2
+{
+  color:green;
+}
+#paycard.paycard input[type=submit]
+{
+  background-color:blue;
+  color:white;
+}
+#paycard.paycard input[type=submit]
+{
+  padding-left:20px;
+  padding-right: 20px;
+  margin-left:100px;
+}
+#item_details table
+{
+  margin-top: -100px;
+  margin-left:25%;
+  margin-bottom:20px;
+  text-align: center; 
+}
+table th
+{
+  background-color: black;
+}
+table 
+{
+  color:white;
+  width:100%;
+}
+table td
+{
+  background-color: white;
+  color:brown;
+}
+input#p_cardno
+{
+  width:300px;
+  letter-spacing: 3px;
+  font-size: 20px;
+}
+.paycard img
+{
+  width:320px;
+}

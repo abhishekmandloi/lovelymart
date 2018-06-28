@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>LovelyMart</title>
+<link rel="stylesheet" type="text/css" href="lovelymart.css" />
+<link rel="stylesheet" type="text/css" href="lovelymartproduct.css" />
+<link rel="stylesheet" type="text/css" href="lovelymartmobile.css" />
+<link rel="stylesheet" type="text/css" href="lovely_payment.css" />
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+</head>
+<body onload="loading();">
+<div class="header">
+	<img id="lovelylogo" style="visibility:visible;" src="logo lovely.gif" />	
+	<marquee direction="left" class="left">LovelyMart-Best Online Shopping E-commerce Website</marquee>
+</div>
+<script>
+	function loading()
+	{
+		getdata();		
+	}
+	function getdata()
+		{
+			
+			var name=localStorage.getItem("Addname3");
+			var price=localStorage.getItem("Addprice3");
+			var image=localStorage.getItem("Addimage3");
+			var quantity=localStorage.getItem("Addquantity3");
+			var total=localStorage.getItem("Addtotal3");
+				if(name==="" || price==="" || image==="")
+				{
+					document.getElementById('item_details').style.display='none';
+				}
+				else
+				{
+					document.getElementById('Name').innerHTML = name;
+					document.getElementById('Price').innerHTML = "Rs. "+price;
+					document.images.pic.src = image;
+					document.getElementById('Quantity').innerHTML = quantity;
+					document.getElementById('Total').innerHTML = "Rs. "+total;
+				}
+				
+		}
+
+</script>
+<div id="main_nav" class="navbar">
+
+	<ul class="navigation">
+	<a id="menubuttons"  title="MENU CATEGORIES" onclick="show('menubutton');"><img src="menubutton.jpg"></a>
+		<li><a href="home.html" target="_parent">Home</a></li>
+		
+		
+		
+		
+		<li><a href="Loginmart.html" target="_parent">Login</a>
+		<ul>
+			<li><a href="registerlm.html" target="_parent">New Registration</a></li>
+			<li><a href="forgotpass.html" target="_parent">Forgot Password</a></li>
+		</ul>		
+		</li>
+		
+		
+		
+		
+		
+		<li><a href="user_reviews.html" target="_parent">User Reviews</a></li>
+		
+		
+		
+		
+		
+		<li><a href="addtocart.html" target="_parent">Add to Cart</a></li>
+		
+		
+		
+		
+		
+		<li><a href="about.html" target="_parent">About Us</a></li>
+		
+		
+		
+		
+		
+		<li><a href="contacts.html" target="_parent">Contact Us</a></li>
+		
+		
+		
+	</ul>
+	<select id="menucategories" style="display:none;" onchange="location = this.value;">
+				<option>CATEGORIES</option>
+				<option disabled>[CLOTHES]</option>
+				<option value="men_cloth.html">Men Fashion</option>
+				<option value="women_cloth.html">Women Fashion</option>
+				<option value="kid_cloth.html">Kid Fashion</option>
+				<option disabled>[Shoes]</option>
+				<option value="men_shoes.html">For Men</option>
+				<option value="women_shoes.html">For Women</option>
+				<option value="kid_shoes.html">For Kid</option>
+				<option disabled>[Electronics]</option>
+				<option value="led_tv.html">LED TV</option>
+				<option value="laptop.html">Laptop</option>
+				<option disabled>[Watches]</option>
+				<option value="m_watch.html">For Men</option>
+				<option value="w_watch.html">For Women</option>
+				<option value="k_watch.html">For Kid</option>	
+	</select>
+	<select id="mainmenu" name="mainmenu"  onchange="location = this.value;">
+	<option value="home.html" href="home.html" selected>HOME</option>
+	<option value="Loginmart.html" href="Loginmart.html" disabled>LOGIN | REGISTER</option>
+	<option value="Loginmart.html" href="Loginmart.html" >LOGIN</a></option>
+	<option value="registerlm.html" href="registerlm.html" >NEW REGISTERATION</option>
+	<option value="forgotpass.html" href="forgotpass.html" >FORGOT PASSWORD</option>
+	<option value="user_reviews.html" href="user_reviews.html" >USER REVIEWS</option>
+	<option value="addtocart.html" href="addtocart.html" >ADD TO CART</option>
+	<option value="about.html" href="about.html" >ABOUT US</option>
+	<option value="contacts.html" href="contacts.html" >CONTACT US</option>
+	</select>
+
+</div>																																																
+<div class="products" >
+	
+	<div class="prod_slide">
+			<img src="image1.jpg" class="produ_t" name="slideshow2" >
+			<script type="text/javascript">
+				var numberImage =1
+				function myslide()
+				{
+					document.images.slideshow2.src=("image"+numberImage+".jpg")
+					if(numberImage <2)
+					numberImage = numberImage +1
+					else
+					numberImage =1
+					setTimeout("myslide()",4500)
+				}
+				myslide()
+			</script>
+			
+	</div>
+<script>
+  function show(data)
+  {
+     var display = document.getElementById(data);
+	 if(display.style.display === 'none')
+	 {
+		display.style.display = 'block';
+	 }
+	 else
+	 {
+	 display.style.display = 'none';
+	 }
+  }
+  function hide(datalist)
+  {
+	  var display = document.getElementById(datalist);
+	 if(display.style.display === 'block')
+	 {
+		display.style.display = 'none';
+	 }
+	 else
+	 {
+	 display.style.display = 'none';
+	 }
+  }
+</script>
+	<div id="menubutton" style="display:none;" class="categories">
+
+			<h1>CATEGORIES</h1>
+				<h3 onclick="show('cloth_cat')">CLOTHES [+]</h3>
+				<div id="cloth_cat" class="cloth_cat">
+					<h4><a href="men_cloth.html">Men Fashion</a></h4>
+					<h4><a href="women_cloth.html">Women Fashion</a></h4>
+					<h4><a href="kid_cloth.html">Kid Fashion</a></h4>
+				</div>
+				<h3 onclick="show('shoes_cat')">Shoes [+]</h3>
+				<div id="shoes_cat" class="shoes_cat">
+					<h4><a href="men_shoes.html">For Men</a></h4>
+					<h4><a href="women_shoes.html">For Women</a></h4>
+					<h4><a href="kid_shoes.html">For Child</a></h4>
+				</div>
+				<h3 onclick="show('electronics_cat')">Electronics [+]</h3>
+				<div id="electronics_cat" class="electronics_cat">
+					<h4><a href="led_tv.html">LED TV</a></h4>
+					<h4><a href="laptop.html">Laptop</a></h4>
+				</div>
+				<h3 onclick="show('watch_cat')">Watches [+]</h3>
+				<div id="watch_cat" class="watch_cat">
+					<h4><a href="m_watch.html">For Men</a></h4>
+					<h4><a href="w_watch.html">For Women</a></h4>
+					<h4><a href="k_watch.html">For Kid</a></h4>	
+				</div>
+	</div>
+	<div class="Payment">
+		<div class="payment_process">
+			<h1>Choose your Payment Process</h1>
+			<a class="cash_on_del" onclick="show('cash_on_delivery');hide('paycard');" href="#COD">Cash on Delivery</a>
+			<br />
+			<a class="padding_payment" onclick="show('paycard');hide('cash_on_delivery');" href="#PNCD">Pay Now by Credit / Debit Card </a>
+		</div>
+		<div id="item_details" class="Item_details">
+			<table style="width:50%;border:1px solid black;background-color:navy;">
+			<tr>
+			<th>ITEM NAME </th>
+			<th>ITEM PRICE</th>
+			<th>QUANTITY</th>
+			<th>TOTAL PRICE</th>
+			<th><span style="background-color:red;color:white;cursor:pointer;" onclick="document.getElementById('item_details').style.display='none';removedata();">Remove</span></th>
+<script>
+function removedata()
+		{
+			document.getElementById('item_details').style.display='none';
+			var Remove_name="";
+			localStorage.setItem("Addname3", Remove_name); 
+			var Remove_price="";
+			localStorage.setItem("Addprice3",Remove_price);
+			var Remove_image="";
+			localStorage.setItem("Addimage3",Remove_image);
+			var Remove_total="";
+			localStorage.setItem("Addtotal3",Remove_total);
+			var Remove_quantity="";
+			localStorage.setItem("Addquantity3",Remove_quantity);
+		}
+</script>
+			</tr>
+			<tr>
+				<td><img src="" id="pic" width="100" height="100">
+				<span id="Name" style="margin:15px;"></span>
+				</td>
+				<td><span id="Price"></span></td>
+				<td><span id="Quantity"></span></td>
+				<td><span id="Total"></span></td>
+			</tr>
+			</table>
+		</div>
+		<div id="cash_on_delivery" class="cash_on_delivery" style="display:none;">
+			<form action="cashdelivery.php" method="post">
+				<a class="cash_on_del2" href="#COD" name="COD">Cash on Delivery</a>
+				<br />
+				<h2>Name:</h2>
+				<input type="text" id="cname" placeholder="Name..." size="30"  value="" required />
+				<br />
+				<h2>Address:</h2>
+				<input type="text" id="caddress" placeholder="Address..." size="70" value="" required />
+				<br />
+				<h2>Mobile Number:</h2>
+				<input type="text" id="cmobile" placeholder="Mobile Number..." size="15" value="" required />
+				<h2>Pincode:</h2>
+				<input type="text" id="cpincode" placeholder="Pincode of City" value="" size="10" required />
+				<h2>Email Id:</h2>
+				<input type="text" id="c_email" placeholder="Email Id" value="" size="40" required />
+				<h2>Land Mark:</h2>
+				<input type="text" placeholder="Land Mark..." size="30" value="" />
+				<br />
+				<br />
+				<script>
+				function check()
+				{		
+						var count=0;
+						var name=document.getElementById("cname").value;
+						var address=document.getElementById("caddress").value;
+						var mobileno=document.getElementById("cmobile").value;
+						var pincode=document.getElementById("cpincode").value;
+						var email=document.getElementById("c_email").value;
+						if(name==="")
+						{
+							count+=1;
+							window.alert("Please enter the name ");
+						}
+						if(address==="")
+						{
+							count+=1;
+							window.alert("Please enter the address ");
+						}
+						if(mobileno==="" && mobileno.length!=10)
+						{
+							count+=1;
+							window.alert("Please enter the correct mobileno.")
+						}
+						if(pincode==="" && pincode.length!=6 && isNaN(pincode)===false)
+						{
+							count+=1;
+							window.alert("Wrong Pincode");
+						}
+						if(email==="")
+						{
+							count+=1;
+							window.alert("Please enter valid email id");
+						}
+						if(count==0)
+						{
+							window.alert("Item has been Booked and will reached in 7 days...");
+							removedata();
+						}
+				}
+				</script>
+				<input id="donebutton" type="submit" onclick="check();" value="DONE" />
+			</form>
+		</div>
+		<div id="paycard" class="paycard" style="display:none;">
+			<form action="paynow.php" method="post" onsubmit="paybycard();">
+				<a class="paynowcard" href="#PNCD" name="PNCD">PAY NOW</a>
+				<br />
+				<h1>By Credit or Debit Card</h1>
+				<br />
+				<h2>Pincode:</h2>
+				<input id="p_code" type="text" placeholder="Pincode of City" value="" size="10" required />
+				
+				<h2>NAME</h2>
+				<input id="p_name" type="text" placeholder="Name..." size="30" value="" required />
+				<h2>Email Id:</h2>
+				<input id="p_email" type="text" placeholder="Email Id" value="" size="40" required />
+				<h2>Address:</h2>
+				<input id="p_address" type="text" placeholder="Address..." size="70" value="" required />
+				<br />
+				<br />
+				<h2>BANK</h2>
+				<select id="bank" name="bank">
+				      <option value="BANK OF INDIA">BANK OF INDIA</option>
+					  <option value="PUNJAB NATIONAL BANK">PUNJAB NATIONAL BANK</option>
+					  <option value="ICICI BANK">ICICI BANK</option>
+					  <option value="BANK OF PATIALA">BANK OF PATIALA</option>
+					  <option value="INDIAN OVERSEAS BANK">INDIAN OVERSEAS BANK</option>
+					  <option value="STATE BANK OF INDIA">STATE BANK OF INDIA</option>
+				</select>
+				<br />
+				<h2>CARD DETAILS</h2>
+				<h3>Card Number</h3>
+				<input id="p_cardno" type="text" placeholder="16 DIGIT No..." size="16" value="" required />
+				<br />
+				<img src="cardpay.jpg" width="300">
+				<h3>Card Expiry Date</h3> 
+				<input id="p_edate" type="text" placeholder="DD/MM/YYYY" size="16" required />
+				<br />
+				<br />
+				<input id="paybutton" type="submit" onclick="card();" value="PAY" />
+				<script>
+					function card()
+					{
+						var pname=document.getElementById("p_name").value;
+						var paddress=document.getElementById("p_address").value;
+						var pcardno=document.getElementById("p_cardno").value;
+						var pcode=document.getElementById("p_code").value;
+						var pemail=document.getElementById("p_email").value;
+						var pedate=document.getElementById("p_edate").value;
+						if(pname==="")
+						{
+							window.alert("Please enter the name ");
+						}
+						if(paddress==="")
+						{
+							window.alert("Please enter the address ");
+						}
+						if(pcardno.length!=16)
+						{
+							window.alert("Please enter the valid Card Number");
+						}
+						if(pcode.length!=6 )
+						{
+							window.alert("Wrong Pincode");
+						}
+						if(pedate.length!=10)
+						{
+							window.alert("Please enter the valid Expiry date");
+						}
+						if(pemail==="")
+						{
+							window.alert("Please enter valid email id");
+						}
+						else
+						{
+							show('otp');
+						}
+						
+					}
+				</script>
+			</form>
+			<div id="otp" style="display:none;" class="otp">
+			
+				<h1>ONE TIME PASSWORD (OTP) HAS BEEN SENT TO YOUR EMAIL ID</h1>
+				<br />
+				<h2>Enter One Time Password(OTP)</h2>
+				<input type="text" id="otp_check" size="4" required />
+				<br />
+				<input type="button" onclick="otp('otp_check');" value="SEND" />
+				<script>
+					function otp(data)
+					{
+						var x=document.getElementById(data).value;
+						if(x.length==4)
+						{
+								if(isNaN(x))
+								{
+									window.alert("Please Enter digits only not alphabets");
+								}
+								else
+								{
+								window.alert('Payment Success');
+								removedata();
+								}
+						}
+						else
+						{
+								window.alert('Please Enter a valid OTP');
+								window.alert('Hint:Enter a four digit OTP to confirm');
+						}
+					}
+				</script>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+<div class="footer">
+	Copyright &copy; Abhishek Mandloi,Yahya Jami,Harshit Jaiswal,Akash Kumar Singh
+</div>
+</body>
+</html>

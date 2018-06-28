@@ -1,0 +1,79 @@
+.productsdetails .websiteinfo
+{
+  padding:25vh;
+  background-color:lightblue;
+  color:white;
+  font-size:40px;
+  margin:0;
+  text-align: center;
+  text-transform: uppercase;
+}
+.productsdetails .elec1,.productsdetails .elec3,
+.productsdetails .clothes1,.productsdetails .clothes3,
+.productsdetails .shoes1,.productsdetails .shoes3,
+.productsdetails .watches1,.productsdetails .watches3
+{
+  padding:40%;
+  width:20%;
+  z-index: -100;
+}
+.productsdetails .clothes1
+{
+  background-image: url('clothes1.jpg');
+}
+.productsdetails .clothes3
+{
+  background-image: url('clothes3.jpg');
+}
+.productsdetails .shoes1
+{
+  background-image: url('shoes6.jpg');
+}
+.productsdetails .shoes3
+{
+  background-image: url('shoes3.jpg');
+}
+.productsdetails .elec1
+{
+  background-image: url('pled2.jpg');
+}
+.productsdetails .elec3
+{
+  background-image: url('laptop10.jpg');
+}
+.productsdetails .watches1
+{
+  background-image: url('watches1.jpg');
+}
+
+.productsdetails .watches3
+{
+  background-image: url('watches3.jpg');
+}
+
+.productsdetails .clothes1,.productsdetails .clothes3,.productsdetails .shoes1,.productsdetails .shoes3,
+.productsdetails .elec1,.productsdetails .elec3,.productsdetails .watches1, .productsdetails .watches3
+{
+  background-repeat:no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+}
+.title
+{
+  color:white;
+  font-size: 50px;
+  width:900px;
+  text-align: center;
+  margin-left:-300px;
+  text-transform:uppercase;
+}
+.topclass
+{
+  background-color: rgba(255,255,255,0.2);
+  color:white;
+  padding:10px;
+  position:absolute;
+  margin-top:-40px;
+  border-color:transparent transparent transparent transparent;
+  border-radius: 40px 40px 0px 0px;  
+}

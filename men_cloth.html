@@ -1,0 +1,603 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>LovelyMart</title>
+<link rel="stylesheet" type="text/css" href="lovelymart.css" />
+<link rel="stylesheet" type="text/css" href="lovelymartproduct.css" />
+<link rel="stylesheet" type="text/css" href="lovelymartmobile.css" />
+<link rel="stylesheet" type="text/css" href="addtocart.css" />
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+<script type="text/javascript" src="javaanim.js"></script>
+</head>
+<body>
+<div class="header">
+	<img id="lovelylogo" style="visibility:visible;" src="logo lovely.gif" />	
+	<marquee direction="left" class="left">LovelyMart-Best Online Shopping E-commerce Website</marquee>
+</div>
+<div id="main_nav" class="navbar">
+	<ul class="navigation">
+	<a id="menubuttons"  title="MENU CATEGORIES" onclick="show('menubutton');"><img src="menubutton.jpg"></a>
+		<li><a href="home.html" target="_parent">Home</a></li>
+		
+		
+		
+		
+		<li><a href="Loginmart.html" target="_parent">Login</a>
+		<ul>
+			<li><a href="registerlm.html" target="_parent">New Registration</a></li>
+			<li><a href="forgotpass.html" target="_parent">Forgot Password</a></li>
+		</ul>		
+		</li>
+		
+		
+		
+		
+		
+		<li><a href="user_reviews.html" target="_parent">User Reviews</a></li>
+		
+		
+		
+		
+		
+		<li><a href="addtocart.html" target="_parent">Add to Cart</a></li>
+		
+		
+		
+		
+		
+		<li><a href="about.html" target="_parent">About Us</a></li>
+		
+		
+		
+		
+		
+		<li><a href="contacts.html" target="_parent">Contact Us</a></li>
+		
+		
+		
+	</ul>
+	<select id="menucategories" style="display:none;" onchange="location = this.value;">
+				<option>CATEGORIES</option>
+				<option disabled>[CLOTHES]</option>
+				<option value="men_cloth.html">Men Fashion</option>
+				<option value="women_cloth.html">Women Fashion</option>
+				<option value="kid_cloth.html">Kid Fashion</option>
+				<option disabled>[Shoes]</option>
+				<option value="men_shoes.html">For Men</option>
+				<option value="women_shoes.html">For Women</option>
+				<option value="kid_shoes.html">For Kid</option>
+				<option disabled>[Electronics]</option>
+				<option value="led_tv.html">LED TV</option>
+				<option value="laptop.html">Laptop</option>
+				<option disabled>[Watches]</option>
+				<option value="m_watch.html">For Men</option>
+				<option value="w_watch.html">For Women</option>
+				<option value="k_watch.html">For Kid</option>	
+	</select>
+	<select id="mainmenu" name="mainmenu"  onchange="location = this.value;">
+	<option value="home.html" href="home.html" selected>HOME</option>
+	<option value="Loginmart.html" href="Loginmart.html" disabled>LOGIN | REGISTER</option>
+	<option value="Loginmart.html" href="Loginmart.html" >LOGIN</a></option>
+	<option value="registerlm.html" href="registerlm.html" >NEW REGISTERATION</option>
+	<option value="forgotpass.html" href="forgotpass.html" >FORGOT PASSWORD</option>
+	<option value="user_reviews.html" href="user_reviews.html" >USER REVIEWS</option>
+	<option value="addtocart.html" href="addtocart.html" >ADD TO CART</option>
+	<option value="about.html" href="about.html" >ABOUT US</option>
+	<option value="contacts.html" href="contacts.html" >CONTACT US</option>
+	</select>
+
+</div>																																																				
+<div class="products" >
+	
+	<div class="prod_slide">
+			<img src="image1.jpg" class="produ_t" name="slideshow2" >
+			<script type="text/javascript">
+				var numberImage =1
+				function myslide()
+				{
+					document.images.slideshow2.src=("image"+numberImage+".jpg")
+					if(numberImage <2)
+					numberImage = numberImage +1
+					else
+					numberImage =1
+					setTimeout("myslide()",4500)
+				}
+				myslide()
+			</script>
+			
+	</div>
+<script>
+  function show(data)
+  {
+     var display = document.getElementById(data);
+	 if(display.style.display === 'none')
+	 {
+		display.style.display = 'block';
+	 }
+	 else
+	 {
+	 display.style.display = 'none';
+	 }
+  }
+  
+</script>
+	<div id="menubutton" class="categories">
+
+			<h1>CATEGORIES</h1>
+				<h3 onclick="show('cloth_cat')">CLOTHES [+]</h3>
+				<div id="cloth_cat" class="cloth_cat">
+					<h4><a href="men_cloth.html">Men Fashion</a></h4>
+					<h4><a href="women_cloth.html">Women Fashion</a></h4>
+					<h4><a href="kid_cloth.html">Kid Fashion</a></h4>
+				</div>
+				<h3 onclick="show('shoes_cat')">Shoes [+]</h3>
+				<div id="shoes_cat" class="shoes_cat">
+					<h4><a href="men_shoes.html">For Men</a></h4>
+					<h4><a href="women_shoes.html">For Women</a></h4>
+					<h4><a href="kid_shoes.html">For Kid</a></h4>
+				</div>
+				<h3 onclick="show('electronics_cat')">Electronics [+]</h3>
+				<div id="electronics_cat" class="electronics_cat">
+					<h4><a href="led_tv.html">LED TV</a></h4>
+					<h4><a href="laptop.html">Laptop</a></h4>
+				</div>
+				<h3 onclick="show('watch_cat')">Watches [+]</h3>
+				<div id="watch_cat" class="watch_cat">
+					<h4><a href="m_watch.html">For Men</a></h4>
+					<h4><a href="w_watch.html">For Women</a></h4>
+					<h4><a href="k_watch.html">For Kid</a></h4>	
+				</div>
+	</div>
+	<div class="productsdetails">
+		
+		<div id="id01" class="modal" style="background-color:#f1f1f1">
+				<div class="imgcontainer">
+					<span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Details">&times;</span>
+					<img src="img_avatar2.png" alt="IMAGE" name="picture" id="demo_image" class="avatar">
+				</div>
+				<div class="container" >
+				<div class="datas">
+					<h1>Object Name >></h1><br />
+					<span id="demo_name">Object</span>
+					<br />
+					<h1>Price >></h1>
+					<span id="dollar">Rs.  </span><span id="demo_price">Price</span>
+					<br />
+					<h1>Quantity</h1>
+					<select onclick="demo_totals()" id="quantity">
+					<option selected value="1">1</option>
+					<option value="2">2</option>
+					<option value="3">3</option>
+					<option value="4">4</option>
+					<option value="5">5</option>
+					<option value="6">6</option>
+					<option value="7">7</option>
+					<option value="8">8</option>
+					<option value="9">9</option>
+					<option value="10">10</option>
+					<option value="12">11</option>
+					<option value="12">12</option>
+					</select>
+					<br />
+					<h1>Total Price >></h1>
+					<span id="dollar">Rs.  </span><span id="demo_total">Please select quantity</span>
+					<h1>
+						<a class="paying" href="lovely_payment.html"><button type="submit" onclick="save2();">PAY MONEY </button></a>
+						<a class="add" href="addtocart.html"><button id="adddtocart" type="button" onclick="document.getElementById('id01').style.display='none';save();">Add to Cart</button></a>
+						<button id="canceling" type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>	
+					</h1>
+				</div>
+				</div>
+		</div>
+<script>
+function save(){
+var Addname=document.getElementById('demo_name').innerHTML;
+localStorage.setItem("Addname1", Addname); // save the item
+var Addprice=document.getElementById('demo_price').innerHTML;
+localStorage.setItem("Addprice1",Addprice);
+var Addimage=document.getElementById('demo_image').src;
+localStorage.setItem("Addimage1",Addimage);
+var Addquantity=document.getElementById('quantity').value;
+localStorage.setItem("Addquantity1",Addquantity);
+var Addtotal=document.getElementById('demo_total').innerHTML;
+localStorage.setItem("Addtotal1",Addtotal);
+alert("Added to Cart");
+}
+function save2(){
+var Addname=document.getElementById('demo_name').innerHTML;
+localStorage.setItem("Addname3", Addname); 
+var Addprice=document.getElementById('demo_price').innerHTML;
+localStorage.setItem("Addprice3",Addprice);
+var Addimage=document.getElementById('demo_image').src;
+localStorage.setItem("Addimage3",Addimage);
+var Addquantity=document.getElementById('quantity').value;
+localStorage.setItem("Addquantity3",Addquantity);
+var Addtotal=document.getElementById('demo_total').innerHTML;
+localStorage.setItem("Addtotal3",Addtotal);
+alert("Redirecting to Page...");
+}
+</script>
+<script>
+// Get the modal
+var modal = document.getElementById('id01');
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}
+	function show_img(data)
+	{
+		var imageshow = document.getElementById(data);
+		var x = document.getElementById(data).src;
+		document.images.picture.src=(x);
+	}
+	function show_name(data)
+	{
+		var nameshow = document.getElementById(data);
+		var x = document.getElementById(data).innerHTML;
+		document.getElementById("demo_name").innerHTML =x;
+	}
+	function show_price(datap)
+	{
+		var priceshow = document.getElementById(datap);
+		var x = document.getElementById(datap).innerHTML;
+		document.getElementById("demo_price").innerHTML =x;
+		demo_totals()
+	}
+	function demo_totals()
+	{
+		var x = document.getElementById("demo_price").innerHTML;
+		var y = document.getElementById("quantity").value;
+		document.getElementById("demo_total").innerHTML = x*y;
+	}
+</script>
+	<div class="clothes_data">
+		<div class="cloth_1">
+			<span onclick="document.getElementById('id01').style.display='block'; show_img('ms1'); show_price('shirt1p');show_name('shirt1');" style="width:auto;">
+			<div class="cloth_image">
+			<img id="ms1" src="manshirt1.jpg">
+			</div>
+			<div class="cloth_name">
+			<span id="shirt1">Shirt</span>
+			</div>
+			<div class="cloth_price">
+			Rs.  <span id="shirt1p">40</span>
+			</div>
+			</span>
+		</div>
+		<div class="cloth_1">
+			<span onclick="document.getElementById('id01').style.display='block'; show_img('ms2'); show_price('shirt2p');show_name('shirt2');" style="width:auto;">
+			<div class="cloth_image">
+			<img id="ms2" src="manshirt2.jpg">
+			</div>
+			<div class="cloth_name">
+			<span id="shirt2">Shirt 2</span>
+			</div>
+			<div class="cloth_price">
+			Rs.  <span id="shirt2p">42</span>
+			</div>
+			</span>
+		</div>
+		<div class="cloth_1">
+			<span onclick="document.getElementById('id01').style.display='block'; show_img('ms3'); show_price('shirt3p');show_name('shirt3');" style="width:auto;">
+			<div class="cloth_image">
+			<img id="ms3" src="manshirt3.jpg">
+			</div>
+			<div class="cloth_name">
+			<span id="shirt3">Shirt 3</span>
+			</div>
+			<div class="cloth_price">
+			Rs.  <span id="shirt3p">30</span>
+			</div>
+			</span>
+		</div>
+		<div class="cloth_1">
+			<span onclick="document.getElementById('id01').style.display='block'; show_img('ms4'); show_price('shirt4p');show_name('shirt4');" style="width:auto;">
+			<div class="cloth_image">
+			<img id="ms4" src="manshirt4.jpg">
+			</div>
+			<div class="cloth_name">
+			<span id="shirt4">Shirt 4</span>
+			</div>
+			<div class="cloth_price">
+			Rs.  <span id="shirt4p">34</span>
+			</div>
+			</span>
+		</div>
+		<div class="cloth_1">
+			<span onclick="document.getElementById('id01').style.display='block'; show_img('ms5'); show_price('shirt5p');show_name('shirt5');" style="width:auto;">
+			<div class="cloth_image">
+			<img id="ms5" src="manshirt5.jpg">
+			</div>
+			<div class="cloth_name">
+			<span id="shirt5">Shirt 5</span>
+			</div>
+			<div class="cloth_price">
+			Rs.  <span id="shirt5p">55</span>
+			</div>
+			</span>
+		</div>
+		<div class="cloth_1">
+			<span onclick="document.getElementById('id01').style.display='block'; show_img('ms6'); show_price('shirt6p');show_name('shirt6');" style="width:auto;">
+			<div class="cloth_image">
+			<img id="ms6" src="manshirt6.jpg">
+			</div>
+			<div class="cloth_name">
+			<span id="shirt6">Shirt 6</span>
+			</div>
+			<div class="cloth_price">
+			Rs.  <span id="shirt6p">43</span>
+			</div>
+			</span>
+		</div>
+		<div class="cloth_1">
+			<span onclick="document.getElementById('id01').style.display='block'; show_img('ms7'); show_price('shirt7p');show_name('shirt7');" style="width:auto;">
+			<div class="cloth_image">
+			<img id="ms7" src="manshirt7.jpg">
+			</div>
+			<div class="cloth_name">
+			<span id="shirt7">Shirt 7</span>
+			</div>
+			<div class="cloth_price">
+			Rs.  <span id="shirt7p">55</span>
+			</div>
+			</span>
+		</div>
+		<div class="cloth_1">
+			<span onclick="document.getElementById('id01').style.display='block'; show_img('ms8'); show_price('shirt8p');show_name('shirt8');" style="width:auto;">
+			<div class="cloth_image">
+			<img id="ms8" src="manshirt8.jpg">
+			</div>
+			<div class="cloth_name">
+			<span id="shirt8">Shirt 8</span>
+			</div>
+			<div class="cloth_price">
+			Rs.  <span id="shirt8p">99</span>
+			</div>
+			</span>
+		</div>
+		<div class="cloth_1">
+			<span onclick="document.getElementById('id01').style.display='block'; show_img('ms9'); show_price('shirt9p');show_name('shirt9');" style="width:auto;">
+			<div class="cloth_image">
+			<img id="ms9" src="manshirt9.jpg">
+			</div>
+			<div class="cloth_name">
+			<span id="shirt9">Shirt 9</span>
+			</div>
+			<div class="cloth_price">
+			Rs.  <span id="shirt9p">115</span>
+			</div>
+			</span>
+		</div>
+		<div class="cloth_1">
+			<span onclick="document.getElementById('id01').style.display='block'; show_img('ms10'); show_price('shirt10p');show_name('shirt10');" style="width:auto;">
+			<div class="cloth_image">
+			<img id="ms10" src="manshirt10.jpg">
+			</div>
+			<div class="cloth_name">
+			<span id="shirt10">Shirt 10</span>
+			</div>
+			<div class="cloth_price">
+			Rs.  <span id="shirt10p">299</span>
+			</div>
+			</span>
+		</div>
+		<div class="cloth_1">
+			<span onclick="document.getElementById('id01').style.display='block'; show_img('ms11'); show_price('shirt11p');show_name('shirt11');" style="width:auto;">
+			<div class="cloth_image">
+			<img id="ms11" src="manshirt11.jpg">
+			</div>
+			<div class="cloth_name">
+			<span id="shirt11">Shirt 11</span>
+			</div>
+			<div class="cloth_price">
+			Rs.  <span id="shirt11p">123</span>
+			</div>
+			</span>
+		</div>
+		<div class="cloth_1">
+			<span onclick="document.getElementById('id01').style.display='block'; show_img('ms12'); show_price('shirt12p');show_name('shirt12');" style="width:auto;">
+			<div class="cloth_image">
+			<img id="ms12" src="manshirt12.jpg">
+			</div>
+			<div class="cloth_name">
+			<span id="shirt12">Shirt 12</span>
+			</div>
+			<div class="cloth_price">
+			Rs.  <span id="shirt12p">42</span>
+			</div>
+			</span>
+		</div>
+		<div class="cloth_1">
+			<span onclick="document.getElementById('id01').style.display='block'; show_img('ms13'); show_price('shirt13p');show_name('shirt13');" style="width:auto;">
+			<div class="cloth_image">
+			<img id="ms13" src="manshirt13.jpg">
+			</div>
+			<div class="cloth_name">
+			<span id="shirt13">Shirt 13</span>
+			</div>
+			<div class="cloth_price">
+			Rs.  <span id="shirt13p">93</span>
+			</div>
+			</span>
+		</div>
+		<div class="cloth_1">
+			<span onclick="document.getElementById('id01').style.display='block'; show_img('ms14'); show_price('shirt14p');show_name('shirt14');" style="width:auto;">
+			<div class="cloth_image">
+			<img id="ms14" src="manshirt14.jpg">
+			</div>
+			<div class="cloth_name">
+			<span id="shirt14">Shirt 14</span>
+			</div>
+			<div class="cloth_price">
+			Rs.  <span id="shirt14p">32</span>
+			</div>
+			</span>
+		</div>
+		<div class="cloth_1">
+			<span onclick="document.getElementById('id01').style.display='block'; show_img('ms15'); show_price('shirt15p');show_name('shirt15');" style="width:auto;">
+			<div class="cloth_image">
+			<img id="ms15" src="manshirt15.jpg">
+			</div>
+			<div class="cloth_name">
+			<span id="shirt15">Shirt 15</span>
+			</div>
+			<div class="cloth_price">
+			Rs.  <span id="shirt15p">144</span>
+			</div>
+			</span>
+		</div>
+		<div class="cloth_1">
+			<span onclick="document.getElementById('id01').style.display='block'; show_img('ms16'); show_price('shirt16p');show_name('shirt16');" style="width:auto;">
+			<div class="cloth_image">
+			<img id="ms16" src="manshirt16.jpg">
+			</div>
+			<div class="cloth_name">
+			<span id="shirt16">Shirt 16</span>
+			</div>
+			<div class="cloth_price">
+			Rs.  <span id="shirt16p">200</span>
+			</div>
+			</span>
+		</div>
+		<div class="cloth_1">
+			<span onclick="document.getElementById('id01').style.display='block'; show_img('ms17'); show_price('shirt17p');show_name('shirt17');" style="width:auto;">
+			<div class="cloth_image">
+			<img id="ms17" src="manshirt17.jpg">
+			</div>
+			<div class="cloth_name">
+			<span id="shirt17">Shirt 17</span>
+			</div>
+			<div class="cloth_price">
+			Rs.  <span id="shirt17p">213</span>
+			</div>
+			</span>
+		</div>
+		<div class="cloth_1">
+			<span onclick="document.getElementById('id01').style.display='block'; show_img('ms18'); show_price('shirt18p');show_name('shirt18');" style="width:auto;">
+			<div class="cloth_image">
+			<img id="ms18" src="manshirt18.jpg">
+			</div>
+			<div class="cloth_name">
+			<span id="shirt18">Shirt 18</span>
+			</div>
+			<div class="cloth_price">
+			Rs.  <span id="shirt18p">432</span>
+			</div>
+			</span>
+		</div>
+		<div class="cloth_1">
+			<span onclick="document.getElementById('id01').style.display='block'; show_img('ms19'); show_price('shirt19p');show_name('shirt19');" style="width:auto;">
+			<div class="cloth_image">
+			<img id="ms19" src="manshirt19.jpg">
+			</div>
+			<div class="cloth_name">
+			<span id="shirt19">Shirt 19</span>
+			</div>
+			<div class="cloth_price">
+			Rs.  <span id="shirt19p">322</span>
+			</div>
+			</span>
+		</div>
+		<div class="cloth_1">
+			<span onclick="document.getElementById('id01').style.display='block'; show_img('ms20'); show_price('shirt20p');show_name('shirt20');" style="width:auto;">
+			<div class="cloth_image">
+			<img id="ms20" src="manshirt20.jpg">
+			</div>
+			<div class="cloth_name">
+			<span id="shirt20">Shirt 20</span>
+			</div>
+			<div class="cloth_price">
+			Rs.  <span id="shirt20p">399</span>
+			</div>
+			</span>
+		</div>
+		<div class="cloth_1">
+			<span onclick="document.getElementById('id01').style.display='block'; show_img('ms21'); show_price('shirt21p');show_name('shirt21');" style="width:auto;">
+			<div class="cloth_image">
+			<img id="ms21" src="manshirt21.jpg">
+			</div>
+			<div class="cloth_name">
+			<span id="shirt21">Shirt 21</span>
+			</div>
+			<div class="cloth_price">
+			Rs.  <span id="shirt21p">42</span>
+			</div>
+			</span>
+		</div>
+		<div class="cloth_1">
+			<span onclick="document.getElementById('id01').style.display='block'; show_img('ms22'); show_price('shirt22p');show_name('shirt22');" style="width:auto;">
+			<div class="cloth_image">
+			<img id="ms22" src="manshirt22.jpg">
+			</div>
+			<div class="cloth_name">
+			<span id="shirt22">Shirt 22</span>
+			</div>
+			<div class="cloth_price">
+			Rs.  <span id="shirt22p">53</span>
+			</div>
+			</span>
+		</div>
+		<div class="cloth_1">
+			<span onclick="document.getElementById('id01').style.display='block'; show_img('ms23'); show_price('shirt23p');show_name('shirt23');" style="width:auto;">
+			<div class="cloth_image">
+			<img id="ms23" src="manshirt23.jpg">
+			</div>
+			<div class="cloth_name">
+			<span id="shirt23">Shirt 23</span>
+			</div>
+			<div class="cloth_price">
+			Rs.  <span id="shirt23p">64</span>
+			</div>
+			</span>
+		</div>
+		<div class="cloth_1">
+			<span onclick="document.getElementById('id01').style.display='block'; show_img('ms24'); show_price('shirt24p');show_name('shirt24');" style="width:auto;">
+			<div class="cloth_image">
+			<img id="ms24" src="manshirt24.jpg">
+			</div>
+			<div class="cloth_name">
+			<span id="shirt24">Shirt 24</span>
+			</div>
+			<div class="cloth_price">
+			Rs.  <span id="shirt24p">63</span>
+			</div>
+			</span>
+		</div>
+		<div class="cloth_1">
+			<span onclick="document.getElementById('id01').style.display='block'; show_img('ms25'); show_price('shirt25p');show_name('shirt25');" style="width:auto;">
+			<div class="cloth_image">
+			<img id="ms25" src="manshirt25.jpg">
+			</div>
+			<div class="cloth_name">
+			<span id="shirt25">Shirt 25</span>
+			</div>
+			<div class="cloth_price">
+			Rs.  <span id="shirt25p">39</span>
+			</div>
+			</span>
+		</div>
+		<div class="cloth_1">
+			<span onclick="document.getElementById('id01').style.display='block'; show_img('ms26'); show_price('shirt26p');show_name('shirt26');" style="width:auto;">
+			<div class="cloth_image">
+			<img id="ms26" src="manshirt26.jpg">
+			</div>
+			<div class="cloth_name">
+			<span id="shirt26">Shirt 26</span>
+			</div>
+			<div class="cloth_price">
+			Rs.  <span id="shirt26p">56</span>
+			</div>
+			</span>
+		</div>
+	</div>
+	</div>
+</div>
+
+
+<div class="footer">
+	Copyright &copy; Abhishek Mandloi,Yahya Jami,Harshit Jaiswal,Akash Kumar Singh
+</div>
+</body>
+</html>
