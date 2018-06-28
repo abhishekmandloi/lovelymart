@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>LovelyMart</title>
+<link rel="stylesheet" type="text/css" href="lovelymart.css" />
+<link rel="stylesheet" type="text/css" href="lovelymartproduct.css" />
+<link rel="stylesheet" type="text/css" href="lovelymartmobile.css" />
+<link rel="stylesheet" type="text/css" href="homeparallax.css" />
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+<script type="text/javascript" src="javaanim.js"></script>
+</head>
+<body>
+<a name="top">
+<div class="header">
+	<img id="lovelylogo" style="visibility:visible;" src="logo lovely.gif" />	
+	<marquee direction="left" class="left">LovelyMart-Best Online Shopping E-commerce Website</marquee>
+</div>
+<div id="main_nav" class="navbar">
+	<ul class="navigation">
+	<a id="menubuttons" href="#top" title="MENU CATEGORIES" onclick="show('menubutton');"><img src="menubutton.jpg"></a>
+		<li><a href="home.html" target="_parent">Home</a></li>
+		
+		
+		
+		
+		<li><a href="Loginmart.html" target="_parent">Login</a>
+		<ul>
+			<li><a href="registerlm.html" target="_parent">New Registration</a></li>
+			<li><a href="forgotpass.html" target="_parent">Forgot Password</a></li>
+		</ul>		
+		</li>
+		
+		
+		
+		
+		
+		<li><a href="user_reviews.html" target="_parent">User Reviews</a></li>
+		
+		
+		
+		
+		
+		<li><a href="addtocart.html" target="_parent">Add to Cart</a></li>
+		
+		
+		
+		
+		
+		<li><a href="about.html" target="_parent">About Us</a></li>
+		
+		
+		
+		
+		
+		<li><a href="contacts.html" target="_parent">Contact Us</a></li>
+		
+		
+		
+	</ul>
+	<select id="menucategories" style="display:none;z-index:1;" onchange="location = this.value;">
+				<option>CATEGORIES</option>
+				<option disabled>[CLOTHES]</option>
+				<option value="men_cloth.html">Men Fashion</option>
+				<option value="women_cloth.html">Women Fashion</option>
+				<option value="kid_cloth.html">Kid Fashion</option>
+				<option disabled>[Shoes]</option>
+				<option value="men_shoes.html">For Men</option>
+				<option value="women_shoes.html">For Women</option>
+				<option value="kid_shoes.html">For Kid</option>
+				<option disabled>[Electronics]</option>
+				<option value="led_tv.html">LED TV</option>
+				<option value="laptop.html">Laptop</option>
+				<option disabled>[Watches]</option>
+				<option value="m_watch.html">For Men</option>
+				<option value="w_watch.html">For Women</option>
+				<option value="k_watch.html">For Kid</option>	
+	</select>
+	<select id="mainmenu" name="mainmenu"  onchange="location = this.value;">
+	<option value="home.html" href="home.html" selected>HOME</option>
+	<option value="Loginmart.html" href="Loginmart.html" disabled>LOGIN | REGISTER</option>
+	<option value="Loginmart.html" href="Loginmart.html" >LOGIN</a></option>
+	<option value="registerlm.html" href="registerlm.html" >NEW REGISTERATION</option>
+	<option value="forgotpass.html" href="forgotpass.html" >FORGOT PASSWORD</option>
+	<option value="user_reviews.html" href="user_reviews.html" >USER REVIEWS</option>
+	<option value="addtocart.html" href="addtocart.html" >ADD TO CART</option>
+	<option value="about.html" href="about.html" >ABOUT US</option>
+	<option value="contacts.html" href="contacts.html" >CONTACT US</option>
+	</select>
+</div>											
+<div class="products" >	
+	<div class="prod_slide">
+			<img src="image1.jpg" class="produ_t" name="slideshow2" >
+			<script type="text/javascript">
+				var numberImage =1
+				function myslide()
+				{
+					document.images.slideshow2.src=("image"+numberImage+".jpg")
+					if(numberImage <2)
+					numberImage = numberImage +1
+					else
+					numberImage =1
+					setTimeout("myslide()",4500)
+				}
+				myslide()
+			</script>
+			
+	</div>
+<script>
+  function show(data)
+  {
+     var display = document.getElementById(data);
+	 if(display.style.display === 'none')
+	 {
+		display.style.display = 'block';
+	 }
+	 else
+	 {
+	 display.style.display = 'none';
+	 }
+  }
+
+</script>
+	<div id="menubutton" style="display:none; z-index:300;"class="categories">
+
+			<h1>CATEGORIES</h1>
+				<h3 onclick="show('cloth_cat')">CLOTHES [+]</h3>
+				<div id="cloth_cat" class="cloth_cat">
+					<h4><a href="men_cloth.html">Men Fashion</a></h4>
+					<h4><a href="women_cloth.html">Women Fashion</a></h4>
+					<h4><a href="kid_cloth.html">Kid Fashion</a></h4>
+				</div>
+				<h3 onclick="show('shoes_cat')">Shoes [+]</h3>
+				<div id="shoes_cat" class="shoes_cat">
+					<h4><a href="men_shoes.html">For Men</a></h4>
+					<h4><a href="women_shoes.html">For Women</a></h4>
+					<h4><a href="kid_shoes.html">For Child</a></h4>
+				</div>
+				<h3 onclick="show('electronics_cat')">Electronics [+]</h3>
+				<div id="electronics_cat" class="electronics_cat">
+					<h4><a href="led_tv.html">LED TV</a></h4>
+					<h4><a href="laptop.html">Laptop</a></h4>
+				</div>
+				<h3 onclick="show('watch_cat')">Watches [+]</h3>
+				<div id="watch_cat" class="watch_cat">
+					<h4><a href="m_watch.html">For Men</a></h4>
+					<h4><a href="w_watch.html">For Women</a></h4>
+					<h4><a href="k_watch.html">For Kid</a></h4>	
+				</div>
+	</div>
+	<div id="data_css" class="productsdetails">
+	<div class="search_bar">
+		<input class="search" id="search_data" type="text" placeholder="Search tv,watch,led,shoe,shirt,top,cloth etc..." onkeyup="search(document.getElementById('search_data').value);">
+		<input class="search_button" onclick="search(document.getElementById('search_data').value);" type="button" value="PRODUCT SEARCH">
+	</div>
+	<script>
+	function search(data)
+	{
+		//alert(" searching "+data+" ....");
+		var prod_arr=['laptop','tv','led','watch','shoe','shirt','top','cloth'];
+		var prod_red=['laptop.html','led_tv.html','led_tv.html','m_watch.html','men_shoes.html','men_cloth.html','women_cloth.html','kid_cloth.html'];
+		var i,counter=0;
+		for(i=0; i<prod_arr.length; i++)
+		{
+			if(data==prod_arr[i])
+			{
+				counter=1;
+				location.href=prod_red[i];
+			}
+		}
+		if(counter!=1)
+		{
+			//alert(data+" not found...");
+		}
+	}
+	</script>
+		<div class="websiteinfo">
+		The best Website to Buy any Product in Low Range of Money
+		</div>
+		<div class="clothes1">
+		</div>
+		<div class="clothes3">
+			<div class="title">
+			New Offers on buying the clothes at your suitable range.
+			</div>
+		</div>
+
+		<div class="shoes1">
+		</div>
+
+		<div class="shoes3">
+			<div class="title">
+			Fashion is a language that creates itself in shoes to interpret reality
+			</div>
+		</div>
+
+		<div class="elec1">
+			<div class="title">
+			These highly-rated LED TVs all use LED LCD tech, not OLED or something else
+			</div>
+		</div>
+
+		<div class="elec3">
+			<div class="title">
+			Laptops in affordable ranges of all company like Apple, HP, Lenovo, Dell
+			</div>
+		</div>
+
+		<div class="watches1">
+		</div>
+
+		<div class="watches3">
+			<div class="title">
+			Every man needs a good, solid watch.The best watch is the Presidential Rolex.
+			</div>
+		</div>
+	</div>
+</div>
+
+<a href="#top" class="topclass">TOP</a>
+<div class="footer">
+	Copyright &copy; Lovelymart
+</div>
+</body>
+</html>

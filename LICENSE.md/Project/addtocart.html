@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>LovelyMart</title>
+<link rel="stylesheet" type="text/css" href="lovelymart.css" />
+<link rel="stylesheet" type="text/css" href="lovelymartproduct.css" />
+<link rel="stylesheet" type="text/css" href="lovelymartmobile.css" />
+<link rel="stylesheet" type="text/css" href="addtocart.css" />
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+</head>
+<body onload="loading();">
+<div class="header">
+	<img id="lovelylogo" style="visibility:visible;" src="logo lovely.gif" />	
+	<marquee direction="left" class="left">LovelyMart-Best Online Shopping E-commerce Website</marquee>
+</div>
+<script>
+	function loading()
+	{
+		getcart();		
+	}
+	function getcart()
+		{
+			
+			var name=localStorage.getItem("Addname1");
+			var price=localStorage.getItem("Addprice1");
+			var image=localStorage.getItem("Addimage1");
+			var quantity=localStorage.getItem("Addquantity1");
+			var total=localStorage.getItem("Addtotal1");
+				if(name==="" || price==="" || image==="")
+				{
+					document.getElementById('alertcart').innerHTML='Your Cart is Empty';
+					document.getElementById('datalist').style.display='none';
+				}
+				else
+				{
+					document.getElementById('Name').innerHTML = name;
+					document.getElementById('Price').innerHTML = price;
+					document.images.pic.src = image;
+					document.getElementById('Quantity').innerHTML = quantity;
+					document.getElementById('Total').innerHTML = total;
+					
+				}
+				
+		}
+	function removecart()
+		{
+			var Remove_name="";
+			localStorage.setItem("Addname1", Remove_name); // save the item
+			var Remove_price="";
+			localStorage.setItem("Addprice1",Remove_price);
+			var Remove_image="";
+			localStorage.setItem("Addimage1",Remove_image);
+			var Remove_quantity="";
+			localStorage.setItem("Addquantity1",Remove_quantity);
+			var Remove_total="";
+			localStorage.setItem("Addtotal1",Remove_total);
+		}
+</script>
+<div id="main_nav" class="navbar">
+
+	<ul class="navigation">
+	<a id="menubuttons"  title="MENU CATEGORIES" onclick="show('menubutton');"><img src="menubutton.jpg"></a>
+		<li><a href="home.html" target="_parent">Home</a></li>
+		
+		
+		
+		
+		<li><a href="Loginmart.html" target="_parent">Login</a>
+		<ul>
+
+			<li><a href="registerlm.html" target="_parent">New Registration</a></li>
+			<li><a href="forgotpass.html" target="_parent">Forgot Password</a></li>
+		</ul>		
+		</li>
+		
+		
+		
+		
+		
+		<li><a href="user_reviews.html" target="_parent">User Reviews</a></li>
+		
+		
+		
+		
+		
+		<li><a href="addtocart.html" target="_parent">Add to Cart</a></li>
+		
+		
+		
+		
+		
+		<li><a href="about.html" target="_parent">About Us</a></li>
+		
+		
+		
+		
+		
+		<li><a href="contacts.html" target="_parent">Contact Us</a></li>
+		
+		
+		
+	</ul>
+	<select id="menucategories" style="display:none;" onchange="location = this.value;">
+				<option>CATEGORIES</option>
+				<option disabled>[CLOTHES]</option>
+				<option value="men_cloth.html">Men Fashion</option>
+				<option value="women_cloth.html">Women Fashion</option>
+				<option value="kid_cloth.html">Kid Fashion</option>
+				<option disabled>[Shoes]</option>
+				<option value="men_shoes.html">For Men</option>
+				<option value="women_shoes.html">For Women</option>
+				<option value="kid_shoes.html">For Kid</option>
+				<option disabled>[Electronics]</option>
+				<option value="led_tv.html">LED TV</option>
+				<option value="laptop.html">Laptop</option>
+				<option disabled>[Watches]</option>
+				<option value="m_watch.html">For Men</option>
+				<option value="w_watch.html">For Women</option>
+				<option value="k_watch.html">For Kid</option>	
+	</select>
+	<select id="mainmenu" name="mainmenu"  onchange="location = this.value;">
+	<option value="home.html" href="home.html" selected>HOME</option>
+	<option value="Loginmart.html" href="Loginmart.html" disabled>LOGIN | REGISTER</option>
+	<option value="Loginmart.html" href="Loginmart.html" >LOGIN</a></option>
+	<option value="registerlm.html" href="registerlm.html" >NEW REGISTERATION</option>
+	<option value="forgotpass.html" href="forgotpass.html" >FORGOT PASSWORD</option>
+	<option value="user_reviews.html" href="user_reviews.html" >USER REVIEWS</option>
+	<option value="addtocart.html" href="addtocart.html" >ADD TO CART</option>
+	<option value="about.html" href="about.html" >ABOUT US</option>
+	<option value="contacts.html" href="contacts.html" >CONTACT US</option>
+	</select>
+
+</div>																																																	
+<div class="products" >
+	
+	<div class="prod_slide">
+			<img src="image1.jpg" class="produ_t" name="slideshow2" >
+			<script type="text/javascript">
+				var numberImage =1
+				function myslide()
+				{
+					document.images.slideshow2.src=("image"+numberImage+".jpg")
+					if(numberImage <2)
+					numberImage = numberImage +1
+					else
+					numberImage =1
+					setTimeout("myslide()",4500)
+				}
+				myslide()
+			</script>
+			
+	</div>
+<script>
+  function show(data)
+  {
+     var display = document.getElementById(data);
+	 if(display.style.display === 'none')
+	 {
+		display.style.display = 'block';
+	 }
+	 else
+	 {
+	 display.style.display = 'none';
+	 }
+  }
+  
+</script>
+	<div id="menubutton" style="display:none;" class="categories">
+
+			<h1>CATEGORIES</h1>
+				<h3 onclick="show('cloth_cat')">CLOTHES [+]</h3>
+				<div id="cloth_cat" class="cloth_cat">
+					<h4><a href="men_cloth.html">Men Fashion</a></h4>
+					<h4><a href="women_cloth.html">Women Fashion</a></h4>
+					<h4><a href="kid_cloth.html">Kid Fashion</a></h4>
+				</div>
+				<h3 onclick="show('shoes_cat')">Shoes [+]</h3>
+				<div id="shoes_cat" class="shoes_cat">
+					<h4><a href="men_shoes.html">For Men</a></h4>
+					<h4><a href="women_shoes.html">For Women</a></h4>
+					<h4><a href="kid_shoes.html">For Child</a></h4>
+				</div>
+				<h3 onclick="show('electronics_cat')">Electronics [+]</h3>
+				<div id="electronics_cat" class="electronics_cat">
+					<h4><a href="led_tv.html">LED TV</a></h4>
+					<h4><a href="laptop.html">Laptop</a></h4>
+				</div>
+				<h3 onclick="show('watch_cat')">Watches [+]</h3>
+				<div id="watch_cat" class="watch_cat">
+					<h4><a href="m_watch.html">For Men</a></h4>
+					<h4><a href="w_watch.html">For Women</a></h4>
+					<h4><a href="k_watch.html">For Kid</a></h4>	
+				</div>
+	</div>
+	<div class="cartoptions">
+		<h1 id="alertcart" title="Add your any favorite product in the cart for purchasing it">Your Cart</h1>
+		<div id="datalist">
+				<span id="closecart" title="Remove from Cart" onclick="document.getElementById('datalist').style.display='none';alert('Cart empty');document.getElementById('alertcart').innerHTML='Your Cart is Empty';removecart();">Close &times;</span>
+			<div class="cartsdata">
+				<div id="Image">
+				<img src="" id="pic">
+				</div>
+				<table style="width:50%;border:1px solid black;background-color:lightgrey;">
+			<tr>
+			<th>ITEM NAME </th>
+			<th>ITEM PRICE</th>
+			<th>QUANTITY</th>
+			<th>TOTAL PRICE</th>
+			</tr>
+			<tr>
+				<td>
+				<span id="Name"></span>
+				</td>
+				<td><span>Rs.</span><span id="Price"></span></td>
+				<td><span id="Quantity"></span></td>
+				<td><span>Rs.</span><span id="Total"></span></td>
+			</tr>
+			</table>
+				<div class="payremove">
+					<h1>
+						<a class="payfromcart" href="lovely_payment.html">
+							<button id="adddtocart" type="button" onclick="save();">Pay Money</button>
+						</a>
+					</h1>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<script>
+function save(){
+var Addname=document.getElementById('Name').innerHTML;
+localStorage.setItem("Addname3", Addname); // save the item
+var Addprice=document.getElementById('Price').innerHTML;
+localStorage.setItem("Addprice3",Addprice);
+var Addimage=document.getElementById('pic').src;
+localStorage.setItem("Addimage3",Addimage);
+var Addquantity=document.getElementById('Quantity').innerHTML;
+localStorage.setItem("Addquantity3",Addquantity);
+var Addtotal=document.getElementById('Total').innerHTML;
+localStorage.setItem("Addtotal3",Addtotal);
+}
+</script>
+
+<div class="footer">
+	Copyright &copy; Lovelymart
+</div>
+</body>
+</html>

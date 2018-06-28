@@ -1,0 +1,35 @@
+*{
+  padding: 0;
+  margin:0;
+}
+.topheading
+{
+  background: lightblue;
+  color:white;
+  text-align: center;
+  padding: 20px;
+  font-size: 30px;
+}
+.navbars
+{
+  position:absolute;
+  width: 150px;
+  height: 1020px;
+  padding-left:50px;
+  padding-top:20px;
+  background: black;
+  text-align: left;
+}
+.navbars a,.navbars span
+{
+  text-decoration: none;
+  color:white;
+  padding: 10px;
+  cursor: pointer;
+}
+li{padding: 5px;}
+.main_frame
+{
+  padding: 15px 220px;
+  background-image: url('about.jpg');
+}
